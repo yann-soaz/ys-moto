@@ -1,0 +1,25 @@
+{
+	"name": "ys-moto",
+	"version": "0.1.0",
+	"description": "Affiche une moto",
+	"author": "yann-soaz",
+	"license": "GPL-2.0-or-later",
+	"main": "build/index.js",
+	"scripts": {
+		"build": "wp-scripts build",
+		"format": "wp-scripts format",
+		"lint:css": "wp-scripts lint-style",
+		"lint:js": "wp-scripts lint-js",
+		"packages-update": "wp-scripts packages-update",
+		"plugin-zip": "wp-scripts plugin-zip",
+		"start": "wp-scripts start"
+	},
+	"devDependencies": {
+		"@wordpress/scripts": "^27.0.0"
+	},
+	"dependencies": {
+		"@wordpress/core-data": "^6.27.1",
+		"@wordpress/element": "^5.27.0",
+		"@wordpress/server-side-render": "^4.28.1"
+	}
+}

@@ -1,0 +1,35 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+.wp-block-yann-soaz-ys-motorbike-filter {}
+
+.ys-moto-filter {
+	display:flex;
+	gap: 20px;
+	align-items: center;
+}
+.ys-moto-filter .wp-block-button .wp-block-button__link {
+	background-color: var(--wp--preset--color--white);
+	color: var(--wp--preset--color--primary);
+	box-shadow: none;
+}
+.ys-form-field {
+	display:flex;
+	flex: 1;
+	flex-direction: column;
+}
+
+.ys-form-field label {
+	font-size: .8em;
+}
+.ys-form-field select {
+	padding: 7px 14px;
+	width: 100%;
+	border: none;
+	box-shadow: none;
+	font-size: .9em;
+}

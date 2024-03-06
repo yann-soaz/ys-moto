@@ -1,0 +1,55 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "yann-soaz/ys-motorbike-metas",
+  "version": "0.1.0",
+  "title": "motorcycle meta",
+  "category": "yann-soaz-motorcycle",
+  "description": "Affiche et édite les informations sur une moto",
+  "supports": {
+    "html": false,
+    "spacing": {
+      "padding": true,
+      "margin": true,
+      "blockGap": true
+    },
+    "color": {
+      "heading": true,
+      "text": true
+    },
+    "typography": {
+      "fontSize": true,
+      "fontWeight": true,
+      "textTransform": true
+    }
+  },
+  "usesContext": [
+    "postId",
+    "postType"
+  ],
+  "attributes": {
+    "presentation": {
+      "type": "string",
+      "default": "grid"
+    },
+    "columns": {
+      "type": "integer",
+      "default": 3
+    },
+    "visible_metas": {
+      "type": "array",
+      "default": [
+        "engine_size",
+        "mileage",
+        "first_registration",
+        "model",
+        "marque",
+        "moto_type"
+      ]
+    }
+  },
+  "textdomain": "ys-moto",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css"
+}

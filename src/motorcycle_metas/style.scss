@@ -1,0 +1,35 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+.wp-block-yann-soaz-ys-motorbike-metas {}
+
+
+.moto-data-grid-display {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(max(calc(100% / var(--columns)), 100px), 1fr));
+}
+.moto-data-item {
+	padding: 10px;
+}
+.moto-grid-1 {
+	--columns: 1
+}
+.moto-grid-2 {
+	--columns: 2
+}
+.moto-grid-3 {
+	--columns: 3
+}
+.moto-grid-4 {
+	--columns: 4
+}
+.moto-grid-5 {
+	--columns: 5
+}
+.moto-grid-6 {
+	--columns: 6
+}

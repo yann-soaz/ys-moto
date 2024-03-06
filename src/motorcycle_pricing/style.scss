@@ -1,0 +1,16 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+.wp-block-yann-soaz-ys-motorbike-price span {
+	display: block;
+	padding-block: .2em;
+}
+
+.price.has-reduced {
+	font-size: .7em;
+	text-decoration: line-through;
+}
