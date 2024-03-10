@@ -14,7 +14,7 @@ class YS_SearchForm {
     return $options;
   }
 
-  static function get_metas_options (string $meta_name) : array {
+  static function get_metas_options (string $meta_name, string $after = '', bool $isNumber = false) : array {
     global $wpdb;
     if( empty( $meta_name ) )
       return [];
@@ -23,11 +23,11 @@ class YS_SearchForm {
       LEFT JOIN {$wpdb->posts} p ON p.ID = pm.post_id
       WHERE pm.meta_key = '%s'
       AND p.post_status = '%s'
-      AND p.post_type = '%s' ORDER BY ABS(pm.meta_value) ASC'
+      AND p.post_type = '%s'  ORDER BY ".($isNumber ? 'ABS(pm.meta_value)' : 'pm.meta_value')." ASC
       ", $meta_name, 'publish', 'moto' ) );
       $options = ['Selectionnez une option' => ''];
     foreach($res as $item) {
-      $options[$item.' cm3'] = $item;
+      $options[$item.' '.$after] = $item;
     }
     return $options;
   }
@@ -84,8 +84,8 @@ class YS_SearchForm {
     return self::select($label, $name, self::get_taxonomies_options($tax, $empty));
   }
 
-  static function meta_select ($label, $name, $meta_name) {
-    return self::select($label, $name, self::get_metas_options($meta_name));
+  static function meta_select ($label, $name, string $meta_name, string $after = '', bool $isNumber = false) {
+    return self::select($label, $name, self::get_metas_options($meta_name, $after, $isNumber));
   }
 
   static function select ($label, $name, $options) {

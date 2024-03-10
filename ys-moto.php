@@ -4,7 +4,7 @@
  * Description:       Can easily create a motorcycle store systeme in your wordpress application and set multiple block to search, filter, show motorcycle you sell.
  * Requires at least: 5.8
  * Requires PHP:      7.0
- * Version:           1.1.0
+ * Version:           1.2.0
  * Author:            yann-soaz
  * License:           GPL-2.0-or-later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
